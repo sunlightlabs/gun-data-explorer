@@ -1,0 +1,136 @@
+#page {
+    width:580px;
+    height:850px;
+    margin: auto;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+#mainChartContainer {
+    width:325px;
+    height:100%;
+}
+
+#chart {
+    width:100%;
+    height:100%;
+}
+
+.bigBarLabel {
+    font-size:0.8em;
+    font-style:italic;
+    pointer-events:none;
+    z-index:99999;
+    fill:black;
+    visibility:hidden;
+}
+
+#infoBox {
+    float:right;
+    width:255px;
+}
+
+.miniChartContainer {
+    width:50%;
+    height:150px;
+    margin-bottom:30px;
+}
+
+#ibLeftChartContainer {
+    float:left;
+}
+
+#ibRightChartContainer {
+    float:right;
+}
+
+.miniChartTitle {
+    width: 100%;
+    text-align: center;
+}
+
+.miniBarLabel {
+    font-size:.7em;
+    fill:black;
+}
+
+.stateLabel {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:.8em;
+}
+
+.axis {
+    shape-rendering: crispEdges;
+}
+
+.x.axis {
+    opacity: .5;
+    fill: none;
+}
+
+.x.axis line {
+    stroke: #fff;
+    stroke-opacity: .8;
+}
+
+.x.axis text {
+    font: 8.5px sans-serif;
+    fill: black;
+}
+
+.mini-axis path,
+.mini-axis line {
+    fill:none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.x.mini-axis path {
+    display: none;
+}
+
+.colLabel {
+    font: .7em sans-serif;
+    fill: black;
+}
+
+.bar {
+}
+
+.bar.pro {
+    fill: #e1b51b;
+}
+
+.bar.anti {
+    fill: #d08429;
+}
+
+/* INFO BOX */
+
+.selectorMask {
+    fill: rgba(55,55,55,0);
+    z-index: 999;
+}
+
+.selectorMask.darkened{
+    fill: rgba(55,55,55,.3);
+}
+
+.selectorMask.selected{
+    fill: rgba(55,55,55,0);
+    stroke-width: 2px;
+    stroke: black;
+}
+
+#ibHeader {
+    height: 76px;
+    background-color: gray;
+}
+
+#ibHeader h1 {
+    margin-bottom: 0;
+}
+
+#ibCaption {
+    background-color: lightgray;
+}

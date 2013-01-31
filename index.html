@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="d3.v2.min.js"></script>
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="underscore-min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+    <div id="page">
+        <div id="infoBox">
+            <div id="ibHeader">
+                <h1>National Averages</h1>
+            </div>
+            <div id="ibChartTip" class="tip">Click on any bar for full data</div>
+            <div id="ibLeftChartContainer" class="miniChartContainer">
+                <svg id="stateMiniChart"></svg>
+                <div id="stateMiniChartTitle" class="miniChartTitle">State</div>
+            </div>
+            <div id="ibRightChartContainer" class="miniChartContainer">
+                <svg id="federalMiniChart"></svg>
+                <div id="federalMiniChartTitle" class="miniChartTitle">Federal</div>
+            </div>
+            <div id="ibCaption">
+            </div>
+        </div>
+        <div id="mainChartContainer">
+            <svg id="chart"></svg>
+        </div>
+        <script type="text/javascript" src="bars.js"></script>
+    </div>
+    </body>
+</html>
