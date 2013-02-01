@@ -144,11 +144,11 @@ function draw(states) {
             .attr('y',0);
 
         gs.append('text')
-                .attr('x',200)
+                .attr('x',193)
                 .attr('y',0)
                 .attr('dx',-60)
                 .attr('dy','.8em')
-                .attr('class','bigBarLabel')
+                .attr('class','bigBarLabel anti')
                 .text(function(d){return moneyFormat(get_or_zero(d,'ANTI-GUN'));});
 
         //state labels
@@ -168,11 +168,11 @@ function draw(states) {
             .attr('y',0)
 
         gs.append('text')
-                .attr('x',230)
+                .attr('x',377)
                 .attr('y',0)
                 .attr('dx',3)
                 .attr('dy','.8em')
-                .attr('class','bigBarLabel')
+                .attr('class','bigBarLabel pro')
                 .text(function(d){return moneyFormat(get_or_zero(d,'PRO-GUN'));});
 
         gs.append('rect')
@@ -249,7 +249,7 @@ function selectState(d){
         .classed('selected',true);
 
     d3.select('#ibHeader')
-        .html('<h1>'+state_names[d.abbr]+'</h1>');
+        .html('<span>'+state_names[d.abbr]+'<span class="qualifier">By state and federal spending</span></span>');
 
     d_state = [ 
                 {   
