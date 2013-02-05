@@ -36,23 +36,23 @@ function moneyFormat(s) {
 function getAverages(states) {
     avg_state = [ 
         {   
-            stance: 'Pro'    , 
+            stance: 'Rights'    , 
             val: d3.mean(states,function(s){ return get_or_zero(s,'state_PRO-GUN')}),
             url: 'http://data.influenceexplorer.com/contributions/#Y29udHJpYnV0b3JfaW5kdXN0cnk9UTEzJTJDJmdlbmVyYWxfdHJhbnNhY3Rpb25fdHlwZT1zdGFuZGFyZCZ0cmFuc2FjdGlvbl9uYW1lc3BhY2U9dXJuJTNBbmltc3AlM0F0cmFuc2FjdGlvbg=='
         },
         {   
-            stance: 'Anti'  , 
+            stance: 'Control'  , 
             val: d3.mean(states,function(s){ return get_or_zero(s,'state_ANTI-GUN')}),
             url: 'http://data.influenceexplorer.com/contributions/#Y29udHJpYnV0b3JfaW5kdXN0cnk9UTEyJTJDJmdlbmVyYWxfdHJhbnNhY3Rpb25fdHlwZT1zdGFuZGFyZCZ0cmFuc2FjdGlvbl9uYW1lc3BhY2U9dXJuJTNBbmltc3AlM0F0cmFuc2FjdGlvbg=='
         }
                     ];
     avg_federal = [
         {   
-            stance:'Pro'    , 
+            stance:'Rights'    , 
             val: d3.mean(states,function(s){ return get_or_zero(s,'federal_PRO-GUN') }),
             url: 'http://data.influenceexplorer.com/contributions/#Y29udHJpYnV0b3JfaW5kdXN0cnk9UTEzJTJDJmdlbmVyYWxfdHJhbnNhY3Rpb25fdHlwZT1zdGFuZGFyZCZ0cmFuc2FjdGlvbl9uYW1lc3BhY2U9dXJuJTNBZmVjJTNBdHJhbnNhY3Rpb24='        },
         {   
-            stance: 'Anti'  , 
+            stance: 'Control'  , 
             val: d3.mean(states,function(s){ return get_or_zero(s,'federal_ANTI-GUN')}),
             url: 'http://data.influenceexplorer.com/contributions/#Y29udHJpYnV0b3JfaW5kdXN0cnk9UTEyJTJDJmdlbmVyYWxfdHJhbnNhY3Rpb25fdHlwZT1zdGFuZGFyZCZ0cmFuc2FjdGlvbl9uYW1lc3BhY2U9dXJuJTNBZmVjJTNBdHJhbnNhY3Rpb24='
         }
@@ -137,7 +137,7 @@ function draw(states) {
         //anti-gun bars
         gs.append('rect')
             .classed('bar',true)
-            .classed('anti',true)
+            .classed('control',true)
             .attr('height','10px')
             .attr('width',function(d){ return xright(get_or_zero(d,'ANTI-GUN')); })
             .attr('x',function(d){return 200 - xright(get_or_zero(d,'ANTI-GUN'));})
@@ -253,24 +253,24 @@ function selectState(d){
 
     d_state = [ 
                 {   
-                    stance: 'Pro'  , 
+                    stance: 'Rights'  , 
                     val : get_or_zero(d,'state_PRO-GUN'), 
                     url : get_or_hash(d.urls,'state_PRO-GUN')
                 }, 
                 {   
-                    stance: 'Anti'  , 
+                    stance: 'Control'  , 
                     val : get_or_zero(d,'state_ANTI-GUN'), 
                     url : get_or_hash(d.urls,'state_ANTI-GUN')
                 } 
                     ];
     d_federal = [
                 {   
-                    stance: 'Pro'  , 
+                    stance: 'Rights'  , 
                     val : get_or_zero(d,'federal_PRO-GUN'), 
                     url : get_or_hash(d.urls,'federal_PRO-GUN')
                 }, 
                 {   
-                    stance: 'Anti'  , 
+                    stance: 'Control'  , 
                     val : get_or_zero(d,'federal_ANTI-GUN'), 
                     url : get_or_hash(d.urls,'federal_ANTI-GUN')
                 } 
@@ -327,9 +327,11 @@ function updateMiniChart(sel,data){
 }
 
 
+
+
 function initMinis(states){
 
-    mini_x.domain(['Anti','Pro']);
+    mini_x.domain(['Control','Rights']);
     var mini_ymax = d3.max([  
             d3.max(states,function(s){return get_or_zero(s,'federal_ANTI-GUN');}),
             d3.max(states,function(s){return get_or_zero(s,'federal_PRO-GUN');}),
