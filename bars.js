@@ -184,12 +184,13 @@ function draw(states) {
             .attr('height','10px')
             .attr('width','299px')
             .attr('x',131)
-            .on('mouseover',function(d) { 
-                d3.select('#selector-'+d.id).classed('darkened',true);
-                showValues(d);})
-            .on('mouseout',function(d) { 
+            .on('mouseover',function(d) {
+                    d3.select('#selector-'+d.id).classed('darkened',true);
+                    showValues(d);})
+            .on('mouseout',function(d) {
                 d3.select('#selector-'+d.id).classed('darkened',false); 
-                hideValues(d);})
+                if (d != focus ) {
+                hideValues(d);}})
             .on('click',clickState);
     
         gnax = svg.append("g").attr("class","x axis").attr("transform","translate(70,25)");
@@ -247,6 +248,7 @@ function get_or_hash(d,k){
 
 function selectState(d){
     focus = d;
+    showValues(d);
     d3.select('#selector-'+d.id)
         //.classed('darkened',false)
         .classed('selected',true);
@@ -282,7 +284,7 @@ function selectState(d){
     updateMiniChart('stateMiniChart',d_state);
     updateMiniChart('federalMiniChart',d_federal);
 
-    updateCaption(d.abbr);
+    //updateCaption(d.abbr);
     
 }
 
@@ -296,15 +298,17 @@ function updateCaption(abbr) {
 }
 
 function defaultInfoBox() {
-    d3.select('#ibHeader').html('<h1>National Averages</h1>');
+    d3.select('#ibHeader').html(default_ibHeader_html);
     updateMiniChart('stateMiniChart',avg_state);
     updateMiniChart('federalMiniChart',avg_federal);
-    updateCaption('NA');
+    //updateCaption('NA');
 }
 
 function unselectState(d){
     d3.select('#selector-'+d.id)
         .classed('selected',false);
+    focus = null;
+    hideValues(d);
 }
 
 function updateMiniChart(sel,data){
@@ -397,7 +401,7 @@ function initMinis(states){
 
     initMiniChart('stateMiniChart',avg_state);
     initMiniChart('federalMiniChart',avg_federal);
-    updateCaption('NA');
+    //updateCaption('NA');
 };
 
 
