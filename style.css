@@ -3,8 +3,14 @@
     height:850px;
     margin: auto;
     font-family:Helvetica, Arial, sans-serif;
-    color: #333333;
+    color: rgb(75, 87, 90);
     font-size: 14px;
+}
+a {
+	color: #78bcbf;
+}
+a:hover{
+	color: #635F5C;
 }
 
 #mainChartContainer {
@@ -15,6 +21,7 @@
 #chart {
     width:100%;
     height:100%;
+    padding-top: 10px;
 }
 .bigBarLabel.pro{
 	text-align: right;
@@ -32,7 +39,6 @@
 #infoBox {
     float:right;
     width:240px;
-    padding-left: 14px;
     border-left: 1px dashed #999999;
     padding-top: 10px;
 }
@@ -40,24 +46,30 @@
 .miniChartContainer {
     width:50%;
     height:150px;
-    margin-bottom:30px;
+    margin-bottom:35px;
 }
 
 #ibLeftChartContainer {
     float:left;
+    padding-left: 10px;
+    box-sizing: border-box;
 }
 
 #ibRightChartContainer {
     float:right;
 }
 
-.miniChartTitle {
+#miniChartTitle {
     width: 100%;
     text-align: center;
+    padding-left: 10px;
+    margin-top: 10px;
 }
-
+.miniChartTitle{
+	text-align: center;
+}
 .miniBarLabel {
-    font-size:.7em;
+    font-size: .7em;
     fill:black;
     margin-bottom: 2px;
 }
@@ -134,27 +146,40 @@
     stroke-dasharray: 1px;
     stroke: rgb(207, 207, 207);
 }
-
+#ibChartTip{
+	padding-left: 10px;
+	font-size: .85em;
+}
 #ibHeader {
-	font-size: 27px;
-	margin-bottom: 10px;
+	font-size: 22px;
+	margin-bottom: 0;
 	color: #4e5b5c;
+	background: url(bg_header.png) top left no-repeat;
+	padding: 12px;
+	width: 243px;
+	height: 52px
 }
 
 
 #ibCaption {
 	clear: left;
-        font-size: 0.8em;
-        font-style: italic;
-        font-weight: normal;
+    font-size: 0.85em;
+    font-style: italic;
+    font-weight: normal;
+    border-top: 3px solid #e8e9ea;
+    color: rgb(123, 129, 131);
+    line-height: 1.4em;
+	padding-left: 10px;
+	width: 100%;
+	margin-top: 10px;
 }
 .tip{
-	color: #999999;
+	color: rgb(123, 129, 131);
 	font-style: italic;
 }
 .qualifier {
 	display: block;
-	font-size: 50%;
+	font-size: 60%;
 	font-style: italic;
 	font-weight: normal;
 }
