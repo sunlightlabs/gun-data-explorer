@@ -7,7 +7,11 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-    <div id="page">
+        <div id="page">
+            <div id="intro">
+                <h1> Rootin' Shootin' Contributin' </h1>
+                <p style="font-style:normal">This might be a good place to briefly explain the source of the data and the coding. We could also link to <a href="http://influenceexplorer.com">Influence Explorer</a>. Maybe we'd also mention that the data was categorized by the <a href="http://opensecrets.org">Center for Responsive Politics</a> and that more information on Independent Expenditures is available at <a href="http://reporting.sunlightfoundation.com/outside-spending/">Follow the Unlimited Money</a>. We should also use this space to help users understand how data is being presented here and what we mean by things like "Direct Contributions" and "National Averages."</p>
+            </div>
         <div id="infoBox">
             <span id="ibChartTip" class="tip">Select state for more data</span>
             <h1 id="ibHeader">
@@ -21,11 +25,11 @@
                 
             <div id="ibLeftChartContainer" class="miniChartContainer">
                 <svg id="stateMiniChart"></svg>
-                <div id="stateMiniChartTitle" class="miniChartTitle">State</div>
+                <div id="stateMiniChartTitle" class="miniChartTitle">State<br/>Candidates</div>
             </div>
             <div id="ibRightChartContainer" class="miniChartContainer">
                 <svg id="federalMiniChart"></svg>
-                <div id="federalMiniChartTitle" class="miniChartTitle">Federal</div>
+                <div id="federalMiniChartTitle" class="miniChartTitle">Federal<br/>Candidates</div>
             </div>
             <div id="ibCaption">
                 <p>The above figures include ONLY direct contributions to candidates from interest groups. Information on independent expenditures (another major avenue for influence) is available at <a href="">Follow the Unlimited Money</a></p>
