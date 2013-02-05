@@ -1,8 +1,8 @@
 var svg = d3.select('#chart').attr('width','100%').attr('height','100%');
 
 var labels = [  {'label':'Gun Control','key':'ANTI-GUN','x':0},
-            {'label':'State','key':'abbr','x':75},
-            {'label':'Gun Rights','key':'PRO-GUN','x':169}];
+            //{'label':'State','key':'abbr','x':75},
+            {'label':'Gun Rights','key':'PRO-GUN','x':109}];
 
 var default_ibHeader_html = d3.select('#ibHeader').html();
 
@@ -74,7 +74,7 @@ xleft = d3.scale.sqrt()
     .range([0,-200]);
 
 y = d3.scale.ordinal()
-    .rangeRoundBands([0,800],1);
+    .rangeRoundBands([15,800],1);
 
 function get_or_zero(o,k) {
     if (o.hasOwnProperty(k)) {
@@ -193,8 +193,8 @@ function draw(states) {
                 hideValues(d);}})
             .on('click',clickState);
     
-        gnax = svg.append("g").attr("class","x axis").attr("transform","translate(70,25)");
-        gax = svg.append("g").attr("class","x axis").attr("transform","translate(110,25)");
+        gnax = svg.append("g").attr("class","x axis").attr("transform","translate(70,30)");
+        gax = svg.append("g").attr("class","x axis").attr("transform","translate(110,30)");
         gax.call(xAxis);
         gnax.call(xNegAxis); 
 
@@ -318,7 +318,8 @@ function updateMiniChart(sel,data){
         .data(data)
         .transition()
         .attr("y",function(d) {return mini_y(d.val)})
-        .attr("height",function(d) {return mini_height - mini_y(d.val)});
+        .attr("height",function(d) {return mini_height - mini_y(d.val)})
+
 
     msvg.selectAll('.ieDataLink')
         .data(data)
@@ -376,10 +377,12 @@ function initMinis(states){
             .data(data)
             .enter()
             .append('a')
-            .attr('class','ieDataLink')
+			//.on("mouseover", function(d) {d3.select(sel+d.stance).style("fill","#000000")})
+            //.attr('class','ieDataLink')
             .attr('xlink:href',function(d){ return d.url; })
             .attr('xlink:show','new')
                 .append("rect")
+				.attr("id", function(d) {return sel+d.stance;})
                 .attr("class",function(d){ return d.stance.toLowerCase() })
                 .classed("bar",true)
                 .attr("x",function(d) {return mini_x(d.stance);})
