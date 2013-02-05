@@ -177,6 +177,11 @@ a:hover{
 	color: rgb(123, 129, 131);
 	font-style: italic;
 }
+#miniChartTitle .tip{
+	display: block;
+	font-size: 12px;
+	font-weight: normal; 
+	}
 .qualifier {
 	display: block;
 	font-size: 65%;
