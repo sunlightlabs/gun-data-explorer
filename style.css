@@ -97,19 +97,23 @@
     display: none;
 }
 
+.x.mini-axis text {
+    font-size: .8em;
+}
+
 .colLabel {
-    font: .8em sans-serif;
+    font: .9em sans-serif;
     fill: black;
 }
 
 .bar {
 }
 
-.bar.pro {
+.bar.control {
     fill: #e1b51b;
 }
 
-.bar.anti {
+.bar.rights {
     fill: #d08429;
 }
 

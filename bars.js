@@ -9,7 +9,7 @@ var default_ibHeader_html = d3.select('#ibHeader').html();
 var state_names = {},
     avg_state,
     avg_federal;
-var mini_margin = {top:5,right:5,bottom:20,left:5},
+var mini_margin = {top:10,right:5,bottom:20,left:5},
     mini_width = parseFloat(d3.select('.miniChartContainer').style('width')) - mini_margin.left - mini_margin.right,
     mini_height = parseFloat(d3.select('.miniChartContainer').style('height')) - mini_margin.top - mini_margin.bottom;
 
