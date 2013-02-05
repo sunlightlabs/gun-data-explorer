@@ -1,8 +1,10 @@
 var svg = d3.select('#chart').attr('width','100%').attr('height','100%');
 
-var labels = [  {'label':'Anti-Gun','key':'ANTI-GUN','x':10},
-            {'label':'State','key':'abbr','x':73},
-            {'label':'Pro-Gun','key':'PRO-GUN','x':169}];
+var labels = [  {'label':'Gun Control','key':'ANTI-GUN','x':0},
+            {'label':'State','key':'abbr','x':75},
+            {'label':'Gun Rights','key':'PRO-GUN','x':169}];
+
+var default_ibHeader_html = d3.select('#ibHeader').html();
 
 var state_names = {},
     avg_state,
@@ -155,16 +157,17 @@ function draw(states) {
         gs.append('text')
           .attr('x',205)
           .attr('y',10)
+          .attr('dx',6)
           .classed('stateLabel',true)
           .text(function(d) { return d.abbr; });
         
         //pro-gun bars
         gs.append('rect')
             .classed('bar',true)
-            .classed('pro',true)
+            .classed('rights',true)
             .attr('height','10px')
             .attr('width',function(d){return xright(get_or_zero(d,'PRO-GUN'));})
-            .attr('x',230)
+            .attr('x',240)
             .attr('y',0)
 
         gs.append('text')
@@ -190,7 +193,7 @@ function draw(states) {
             .on('click',clickState);
     
         gnax = svg.append("g").attr("class","x axis").attr("transform","translate(70,25)");
-        gax = svg.append("g").attr("class","x axis").attr("transform","translate(100,25)");
+        gax = svg.append("g").attr("class","x axis").attr("transform","translate(110,25)");
         gax.call(xAxis);
         gnax.call(xNegAxis); 
 
