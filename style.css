@@ -194,3 +194,8 @@ a:hover{
 .bar.control:hover{
 	fill: rgb(231, 207, 28);
 }
+
+.sfLogo{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
