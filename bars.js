@@ -323,7 +323,7 @@ function updateMiniChart(sel,data){
 
     msvg.selectAll('.ieDataLink')
         .data(data)
-        .attr('xlink:href',function(d) { console.log("changing link to "+d.url);return d.url; });
+        .attr('xlink:href',function(d) { return d.url; });
 
     msvg.selectAll('.miniBarLabel')
         .data(data)
