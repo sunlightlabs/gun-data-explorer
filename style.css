@@ -1,11 +1,20 @@
 #page {
     width:580px;
-    height:850px;
+    height:1000px;
     margin: auto;
     font-family:Helvetica, Arial, sans-serif;
     color: rgb(75, 87, 90);
     font-size: 14px;
 }
+
+#intro {
+    width:100%;
+}
+
+#ghButton {
+    float:right;
+}
+
 a {
 	color: #78bcbf;
 }
