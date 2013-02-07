@@ -11,35 +11,41 @@
             <div id="intro">
                 <iframe id="ghButton" src="http://assets.sunlightlabs.com.s3.amazonaws.com/github-buttons/github-btn.html?user=sunlightlabs&repo=gun-data-explorer&type=fork"
                       allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
-                <h1>Gun Campaign Contributions by State</h1>
-<p>
-The graphic below gives state-by-state breakdowns for donations that groups on both sides of the gun debate gave to candidates for state offices (such as governor and state legislature) as well as to candidates for the presidency and U.S. Congress, as well as contributions to political parties and PACs. Pro-gun groups, dominated by the National Rifle Association, out-spend gun control groups in every state. Not included in this chart, but another key component in the influence picture: independent expenditures made by groups in support or opposition to candidates for office. You can find those -- and sort by group or state -- on Sunlight's <a href="http://reporting.sunlightfoundation.com/outside-spending/">Follow the Unlimited Money</a>.
-	</p>
-	<p>
-To use this graphic: Clicking on a state will get you a fly-out box on the right that provides a detailed breakdown and precise amounts of contributions. Clicking on any one of the bars in that box will take you to source data at <a href="http://influenceexplorer.com">Influence Explorer</a>. There you can download tables that will allow you to see who got money from whom. Influence Explorer gathers <a href="http://www.fec.gov/">Federal Election Commission (FEC)</a> data categorized by the <a href="http://opensecrets.org">Center for Responsive Politics</a> by industry (For more on the Center's methodology, see this <a href="http://www.opensecrets.org/news/2011/07/improved-ideological-coding.html">explanation</a>.) It also collects state-level data from the <a href="http://followthemoney.org/">National Institute for Money in State Politics</a>, which gathers information from all 50 states.
-	</p>
+                <h1>Find who got gun money in your state</h1>
+				<p>
+					Click through the chart below for state-by-state breakdowns for donations that groups on both sides of the gun debate give candidates for state offices (such as governor and state legislature) as well as to candidates for the presidency and U.S. Congress and to political parties and PACs. Not included in this chart, but another key component in the influence picture: Independent expenditures made by groups in support or position to candidates, available on Sunlight&apos;s <a href="">Follow the Unlimited Money</a>. Clicking bars on the right hand charts takes you directly to <a href="http://influenceexplorer.com/" target="_blank">Influence Explorer</a> pages where you can download lists of candidates who received money from each sector.
+				</p>
+				<div class="ibChartTip">
+					<span class="tip">Select state for more data</span>
+				</div>
             </div>
         <div id="infoBox">
-            <span id="ibChartTip" class="tip">Select state for more data</span>
-            <h1 id="ibHeader">
-            	National Averages
+            <h1 id="miniChartTitle">
+            	Direct contributions to candidates, parties, and PACs
+            </h1>            
+            <h3 id="ibHeader">
+                National Averages
             	<span class="qualifier">Average total contributions per state for state level and federal candidates, since 1989</span>
-            </h1>
-            <h3 id="miniChartTitle">
-                Direct contributions to candidates, parties, and PACs
-                <span class="tip">Select any bar to see a list of contributions and recipients</span>
             </h3>
-                
             <div id="ibLeftChartContainer" class="miniChartContainer">
                 <svg id="stateMiniChart"></svg>
-                <div id="stateMiniChartTitle" class="miniChartTitle">State<br/>Candidates</div>
+                <div id="stateMiniChartTitle" class="miniChartTitle">State Candidates</div>
             </div>
             <div id="ibRightChartContainer" class="miniChartContainer">
                 <svg id="federalMiniChart"></svg>
-                <div id="federalMiniChartTitle" class="miniChartTitle">Federal<br/>Candidates</div>
+                <div id="federalMiniChartTitle" class="miniChartTitle">Federal Candidates</div>
             </div>
+            <div class="clear"></div>
+            <div class="ibChartTip">
+	            <span class="tip">Select any bar to see a list of contributions and recipients</span>
+       		</div>
             <div id="ibCaption">
-                <p>The above figures include only direct contribution to candidates, party committees, and PACs from interest groups and individuals associated with them, since 1989. Information on independent expenditures (another major avenue for influence) is available at <a href="http://reporting.sunlightfoundation.com/outside-spending/super-pacs/">Follow the Unlimited Money</a></p>
+                <p>
+                	The above figures include only direct contribution to candidates, party committees, and PACs from interest groups and individuals associated with them, since 1989. Information on independent expenditures (another major avenue for influence) is available at <a href="http://reporting.sunlightfoundation.com/outside-spending/super-pacs/">Follow the Unlimited Money</a>
+                </p>
+                <p>
+                	Source data include Center for Responsive Politics and the National Institute on Money In State Politics. For methodology on coding click <a href="http://www.opensecrets.org/news/2011/07/improved-ideological-coding.html">here</a>.
+                </p>
                 <img class="sfLogo" src="sf_logo.png">
             </div>
         </div>

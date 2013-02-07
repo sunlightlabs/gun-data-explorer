@@ -40,22 +40,30 @@ a:hover{
     font-style:italic;
     pointer-events:none;
     z-index:99999;
-    fill:rgb(60, 60, 60);
+    fill:rgb(75, 87, 90);
     visibility:hidden;
     text-align: right;
 }
 
 #infoBox {
     float:right;
-    width:240px;
-    border-left: 1px dashed #999999;
-    padding-top: 10px;
+    width:250px;
+    color: rgb(115, 125, 128);
+    border-left: 1px dashed rgb(218, 220, 221);
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0.3) 0%, rgba(232,233,234,0.3) 1%, rgba(255,255,255,0.25) 18%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.3)), color-stop(1%,rgba(232,233,234,0.3)), color-stop(18%,rgba(255,255,255,0.25)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(255,255,255,0.3) 0%,rgba(232,233,234,0.3) 1%,rgba(255,255,255,0.25) 18%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(255,255,255,0.3) 0%,rgba(232,233,234,0.3) 1%,rgba(255,255,255,0.25) 18%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(255,255,255,0.3) 0%,rgba(232,233,234,0.3) 1%,rgba(255,255,255,0.25) 18%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(255,255,255,0.3) 0%,rgba(232,233,234,0.3) 1%,rgba(255,255,255,0.25) 18%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+
 }
 
 .miniChartContainer {
     width:50%;
     height:150px;
-    margin-bottom:50px;
+    margin-bottom:38px;
 }
 
 #ibLeftChartContainer {
@@ -69,23 +77,28 @@ a:hover{
 }
 
 #miniChartTitle {
-    width: 100%;
-    text-align: center;
-    padding-left: 10px;
-    margin-top: 10px;
+	margin-top: 16px;
+	font-size: 19px;
+	background: url(bg_header.png) top right no-repeat;
+	padding: 12px 38px 0px 9px;
+	width: 202px;
+	height: 78px;
+	margin-left: 1px;
+
 }
 .miniChartTitle{
 	text-align: center;
 }
 .miniBarLabel {
     font-size: .7em;
-    fill:black;
+    fill:rgb(75, 87, 90);
     margin-bottom: 2px;
 }
 
 .stateLabel {
     font-family:Arial, Helvetica, sans-serif;
     font-size:.8em;
+    fill: rgb(75, 87, 90);
 }
 
 .axis {
@@ -104,7 +117,7 @@ a:hover{
 
 .x.axis text {
     font: 8.5px sans-serif;
-    fill: black;
+    fill: rgb(75, 87, 90);
 }
 
 .mini-axis path,
@@ -120,11 +133,12 @@ a:hover{
 
 .x.mini-axis text {
     font-size: .8em;
+    fill: rgb(75, 87, 90);
 }
 
 .colLabel {
     font: .9em sans-serif;
-    fill: black;
+    fill: rgb(75, 87, 90);
 }
 
 .bar {
@@ -155,18 +169,24 @@ a:hover{
     stroke-dasharray: 1px;
     stroke: rgb(158, 158, 158);
 }
-#ibChartTip{
-	padding-left: 10px;
-	font-size: .85em;
+.ibChartTip{
+	padding: 6px 15px;
+	font-size: 12px;
+	background-color: rgba(232, 233, 234, 0.3);
+	text-align: center;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.clear{
+	clear: both;
 }
 #ibHeader {
-	font-size: 18px;
-	margin-bottom: 0;
-	color: #4e5b5c;
-	background: url(bg_header.png) top left no-repeat;
-	padding: 12px;
-	width: 243px;
-	height: 52px
+	font-size: 16px;
+	margin: 21px 0 0px 10px;
+	text-align: center;
 }
 
 
@@ -180,7 +200,9 @@ a:hover{
     line-height: 1.4em;
 	padding-left: 10px;
 	width: 100%;
-	margin-top: 10px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 .tip{
 	color: rgb(123, 129, 131);
@@ -193,10 +215,11 @@ a:hover{
 	}
 .qualifier {
 	display: block;
-	font-size: 65%;
+	font-size: 77%;
 	font-style: italic;
 	font-weight: normal;
 	padding-top: 2px;
+	padding: 0 24px;
 }
 .miniChartContainer .ieDataLink:hover{
 	border-top: 1px solid black;
@@ -212,4 +235,15 @@ a:hover{
 .sfLogo{
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+#intro{
+	line-height: 1.8em;
+}
+#intro .ibChartTip{
+	margin-top: 30px;
+	border-bottom:4px solid #e8e9ea;
+}
+#stateMiniChartTitle, #federalMiniChartTitle{
+	font-size: 12px;
+	font-weight: bold;
 }
