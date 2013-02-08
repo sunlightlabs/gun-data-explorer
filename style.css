@@ -64,12 +64,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', e
     width:50%;
     height:150px;
     margin-bottom:38px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 #ibLeftChartContainer {
     float:left;
     padding-left: 10px;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 #ibRightChartContainer {
