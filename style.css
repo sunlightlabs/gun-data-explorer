@@ -248,6 +248,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', e
 	margin-top: 30px;
 	border-bottom:4px solid #e8e9ea;
 }
+
+#intro p {
+    padding-right:5px;
+}
+
 #stateMiniChartTitle, #federalMiniChartTitle{
 	font-size: 12px;
 	font-weight: bold;
