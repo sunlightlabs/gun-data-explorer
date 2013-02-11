@@ -52,11 +52,11 @@ function getAverages(states) {
         {   
             stance:'Rights'    , 
             val: d3.mean(states,function(s){ return get_or_zero(s,'federal_PRO-GUN') }),
-            url: 'http://data.influenceexplorer.com/contributions/#Y29udHJpYnV0b3JfaW5kdXN0cnk9UTEzJTJDJmdlbmVyYWxfdHJhbnNhY3Rpb25fdHlwZT1zdGFuZGFyZCZ0cmFuc2FjdGlvbl9uYW1lc3BhY2U9dXJuJTNBZmVjJTNBdHJhbnNhY3Rpb24='        },
+            url: 'http://data.influenceexplorer.com/contributions/#c2VhdD1mZWRlcmFsJTNBc2VuYXRlJTdDZmVkZXJhbCUzQWhvdXNlJmNvbnRyaWJ1dG9yX2luZHVzdHJ5PVExMyUyQyZnZW5lcmFsX3RyYW5zYWN0aW9uX3R5cGU9c3RhbmRhcmQmdHJhbnNhY3Rpb25fbmFtZXNwYWNlPXVybiUzQWZlYyUzQXRyYW5zYWN0aW9u'        },
         {   
             stance: 'Control'  , 
             val: d3.mean(states,function(s){ return get_or_zero(s,'federal_ANTI-GUN')}),
-            url: 'http://data.influenceexplorer.com/contributions/#Y29udHJpYnV0b3JfaW5kdXN0cnk9UTEyJTJDJmdlbmVyYWxfdHJhbnNhY3Rpb25fdHlwZT1zdGFuZGFyZCZ0cmFuc2FjdGlvbl9uYW1lc3BhY2U9dXJuJTNBZmVjJTNBdHJhbnNhY3Rpb24='
+            url: 'http://data.influenceexplorer.com/contributions/#c2VhdD1mZWRlcmFsJTNBc2VuYXRlJTdDZmVkZXJhbCUzQWhvdXNlJmNvbnRyaWJ1dG9yX2luZHVzdHJ5PVExMiUyQyZnZW5lcmFsX3RyYW5zYWN0aW9uX3R5cGU9c3RhbmRhcmQmdHJhbnNhY3Rpb25fbmFtZXNwYWNlPXVybiUzQWZlYyUzQXRyYW5zYWN0aW9u'
         }
                     ];
 }
